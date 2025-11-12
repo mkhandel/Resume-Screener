@@ -1,0 +1,8 @@
+John Doe
+Experience
+- Software Engineer at TechCorp (2019-2023)
+- Developed Python NLP pipelines and REST APIs
+Education
+- B.Sc. Computer Science
+Skills
+- Python, OpenAI API, FAISS, Streamlit

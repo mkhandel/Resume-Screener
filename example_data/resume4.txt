@@ -1,0 +1,8 @@
+Emily Davis
+Experience
+- Machine Learning Engineer at AI Labs (2020-2023)
+- Built NLP pipelines, embeddings, and model deployments
+Education
+- M.Sc. AI & Data Science
+Skills
+- Python, ML, NLP, OpenAI API, FAISS, Streamlit

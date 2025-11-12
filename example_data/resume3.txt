@@ -1,0 +1,8 @@
+Michael Johnson
+Experience
+- Backend Engineer at CloudSolutions (2018-2023)
+- Developed AWS Lambda functions and microservices
+Education
+- B.Sc. Computer Engineering
+Skills
+- Python, AWS, Docker, Kubernetes, CI/CD

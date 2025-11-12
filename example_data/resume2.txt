@@ -1,0 +1,8 @@
+Jane Smith
+Experience
+- Data Scientist at DataLabs (2020-2023)
+- Built ML models and automated dashboards
+Education
+- M.Sc. Data Science
+Skills
+- Python, ML, NLP, Pandas, Streamlit

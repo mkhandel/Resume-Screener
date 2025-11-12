@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Resume Screener</title>
+        <style>
+            body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+            textarea { width: 100%; height: 100px; }
+            button { padding: 10px 20px; margin-top: 10px; }
+            .result { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+        </style>
+    </head>
+    <body>
+        <h1>Resume Screener</h1>
+        <p>Enter a job description below and click "Search" to find matching resumes.</p>
+        <textarea id="jobDesc" placeholder="Type job description here..."></textarea><br>
+        <button onclick="searchResumes()">Search</button>
+
+        <h2>Results:</h2>
+        <div id="results"></div>
+
+        <script>
+            async function searchResumes() {
+                const query = document.getElementById('jobDesc').value;
+                const resDiv = document.getElementById('results');
+                resDiv.innerHTML = "Searching...";
+
+                //the header is necessary to tell flask, the recipient of the HTTP request,
+                //that we're passing JSON to it
+                //that way, it will interpret the request correctly
+                //the post to /search is defined in app.py
+                //await allows fetch to convert from a Promise object to an actual HTTP response
+                const response = await fetch('/search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query })
+                });
+
+                //because parsing can take time, .json() returns a Promise
+                //we are waiting for the actual HTTP request and not the Promist
+                const data = await response.json();
+                if (data.error) {
+                    resDiv.innerHTML = "<p style='color:red'>" + data.error + "</p>";
+                    return; // exit early
+                }
+
+
+                let html = "";
+                data.results.forEach(r => {
+                    html += `<div class='result'>
+                                <strong>${r.id}</strong> (Score: ${r.score.toFixed(2)})<br>
+                                <pre>${r.content}</pre>
+                             </div>`; //pre means preserve formatting of content
+                });
+                resDiv.innerHTML = html || "<p>No results found.</p>";
+            }
+        </script>
+    </body>
+    </html>

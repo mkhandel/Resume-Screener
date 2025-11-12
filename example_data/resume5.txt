@@ -1,0 +1,8 @@
+Robert Wilson
+Experience
+- Full Stack Developer at WebTech (2017-2023)
+- Developed React + Node.js apps and backend APIs
+Education
+- B.Sc. Computer Science
+Skills
+- JavaScript, TypeScript, Node.js, React, Streamlit, Docker
