@@ -32,3 +32,5 @@ Why I migrated from cosine similarity to FAISS:
 Both cosine similarity and FAISS are used for calculations performed to determine how similar one vector is to others. Comparing hundreds, thousands, or millions of vectors gets very slow when using cosine similarity because the similarity between vectors has to be calculated on an individual basis. FAISS is scalable while cosine similarity is not. FAISS is also persistent--you can save your FAISS index, a data structure that stores vectors and allows for fast similarity searches. FAISS uses an index, or a data structure containing all the vector information to compare later, that can be saved in a file and retrieved for reuse later.
 
 Why I migrated from Flask to Streamlit:
+When users interact with inputs, the script reruns top-to-bottom automatically.
+More importantly, it has minimal setup--you don't have to specify routes, HTML/CSS/JavaScript-it's just a lot less code.
