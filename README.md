@@ -9,8 +9,10 @@ This is the README for a resume screener. It compares resumes to the job descrip
 python -m venv venv
 
   b. activate the virtual environment we just created
+
 For macOS nd Linux, source venv/bin/activate
-vFor Windows, env\Scripts\activate
+
+For Windows, env\Scripts\activate
 
 3. Install dependencies into virtual environment.
 pip install -r requirements.txt
