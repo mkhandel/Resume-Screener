@@ -5,10 +5,10 @@ This is the README for a resume screener. It compares resumes to the job descrip
 
 2. Create a virtual environment in Python. The reason we use virtual environments is to isolate this project's environment from other projects' environments. Each Python project we have downloaded on our desktop can run with different versions with isolation. We also won't clutter one environment with dependencies from a bunch of different projects.
 
-2a. tell Python to run the virtual environment module, and name that folder venv:
+  a. tell Python to run the virtual environment module, and name that folder venv:
 python -m venv venv
 
-2b. activate the virtual environment we just created
+  b. activate the virtual environment we just created
 For macOS nd Linux, source venv/bin/activate
 vFor Windows, env\Scripts\activate
 
@@ -17,10 +17,11 @@ pip install -r requirements.txt
 
 
 4. Set up OpenAI key
-4a. copy the template .env.example to our .env file, which we then fill with our personal information
+  
+  a. copy the template .env.example to our .env file, which we then fill with our personal information
 cp .env.example .env
 
-4b. replace spaceholder api key with your openai key
+  b. replace spaceholder api key with your openai key
 
 5. Upload resumes as .txt files to example_data/ folder. There are already some sample resumes inside the folder.
 
